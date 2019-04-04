@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+El archivo variant.h describe el hardware de la arduino due,
+para cambiar la frecuencia de salida y la resolución, 
+modificamos este archivo.
+
+Linea 221:
+/*
+ * PWM
+ */
+#define PWM_INTERFACE		PWM
+#define PWM_INTERFACE_ID	ID_PWM
+#define PWM_FREQUENCY		100
+#define PWM_MAX_DUTY_CYCLE	4095
+#define PWM_MIN_DUTY_CYCLE	0
+#define PWM_RESOLUTION		12
+
+La frecuencia se modifica alterando el parametro PWM_FREQUENCY.
+
+Para que funcione la resolución se debe incluir en el programa de arduino:
+
+analogReadResolution(12);
+
+y asi la resolución va entre 0-4095, teniendo una mejor resolución.
+
+-------------------------------------------------------------------------------
+Instalacion:
+-------------------------------------------------------------------------------
+Doble click sobre UpdateArduinoDue.bat
+
+se abrira una ventana y se actualizara el archivo.
+
+Se puede actualizar tantas veces como quieras y alterar los parametros,
+eso si ten cuidado porque estas alterando los parametros por defecto. ;)
+
+-------------------------------------------------------------------------------
+Versión de instalación:
+-------------------------------------------------------------------------------
+IDE 1.8.9
+Arduino Due board 1.6.12
+
+* Es posible que la versión del IDE no influya, pero si es necesario tener la
+versión de la placa 1.6.12. Para otra versión, es necesario modificar el script
+de instalación y comprobar que el archivo a reemplazar sigue en la misma ubicación,
+tiene los mismos parametros, etc.
+
+
+
